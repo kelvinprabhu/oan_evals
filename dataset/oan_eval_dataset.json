@@ -1,0 +1,18 @@
+[
+  {
+    "_section": "=== WEATHER FORECAST (11 languages, city-per-region) ==="
+  },
+  {
+    "category": "weather",
+    "language": "en",
+    "question": "What is the weather forecast for Jaipur today?"
+  },
+  {
+    "_section": "=== MANDI PRICES (varied commodities, cities, languages) ==="
+  },
+  {
+    "category": "mandi_prices",
+    "language": "en",
+    "question": "What is the weather forecast for Jaipur today?"
+  }
+]

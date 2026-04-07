@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+pydantic
+python-dotenv
+requests
+reportlab
+urllib3
+deepeval
+gunicorn

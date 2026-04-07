@@ -1,0 +1,144 @@
+{
+  "meta": {
+    "generated_at": "2026-04-06T07:12:53.871694+00:00",
+    "judge_model": "gpt-4o-mini",
+    "pass_rate_threshold": 0.7,
+    "geval_threshold": 0.6,
+    "total_cases": 4,
+    "passed_cases": 2,
+    "failed_cases": 2,
+    "error_cases": 0,
+    "overall_pass_rate": 0.5,
+    "overall_fail_rate": 0.5,
+    "base_url": "https://dev-vistaar.da.gov.in/",
+    "dataset_path": "dataset/oan_eval_dataset.json"
+  },
+  "summary": {
+    "by_category": [
+      {
+        "category": "weather",
+        "total": 2,
+        "passed": 2,
+        "failed": 0,
+        "error": 0,
+        "pass_rate": 1.0,
+        "failure_rate": 0.0,
+        "failed_case_names": [],
+        "failure_summary": []
+      },
+      {
+        "category": "mandi_prices",
+        "total": 2,
+        "passed": 0,
+        "failed": 2,
+        "error": 0,
+        "pass_rate": 0.0,
+        "failure_rate": 1.0,
+        "failed_case_names": [
+          "mandi_prices_en_what_is_the_current_mandi_price_of_wheat",
+          "mandi_prices_en_what_is_the_market_rate_of_onion_in_nash"
+        ],
+        "failure_summary": [
+          {
+            "metric": "ResponseValidity",
+            "reason": "ResponseValidity FAILED (score=0.436): The response provides a direct answer regarding the unavailability of mandi price data, but it lacks actionable information and key details about alternative sources or specific next steps. The follow-up question about checking prices for other crops is relevant but somewhat generic, which detracts from the overall completeness."
+          },
+          {
+            "metric": "ResponseQuality",
+            "reason": "ResponseQuality FAILED (score=0.279): The response is classified as PARTIAL due to the absence of critical mandi price data for wheat in Delhi, which is the main query. While a citation is present, it is not formatted correctly as it is not bolded and not on its own line, leading to a minor gap in the response."
+          },
+          {
+            "metric": "ResponseValidity",
+            "reason": "ResponseValidity FAILED (score=0.133): The response fails to provide any actionable information regarding the market rate of onion in Nashik, which is a TRACK-V query. Instead, it offers an explanation for the lack of data without addressing the user's request, leading to a low score."
+          },
+          {
+            "metric": "ResponseQuality",
+            "reason": "ResponseQuality FAILED (score=0.027): The response is classified as DEFLECT because it provides no useful information regarding the market rate of onion in Nashik, failing to address the query entirely. There are no checklist items present, and the output does not include any relevant data or citations."
+          }
+        ]
+      }
+    ],
+    "failed_cases": [
+      {
+        "name": "mandi_prices_en_what_is_the_current_mandi_price_of_wheat",
+        "category": "mandi_prices",
+        "section": "MANDI PRICES (varied commodities, cities, languages)",
+        "language": "en",
+        "language_label": "English",
+        "is_decline": false,
+        "question": "What is the current mandi price of wheat in Delhi?",
+        "actual_output": "No mandi price data is available for wheat in Delhi right now. Sometimes data isn't updated in the system. You can check back later or look for prices in nearby mandis like Faridabad or Sonipat.\n\n**Source: Mandi Prices**\n\nWould you like to check the price of another crop like cotton or maize in Delhi?",
+        "pass_rate": 0.3333333333333333,
+        "status": "FAIL",
+        "api_error": false,
+        "metrics": [
+          {
+            "name": "ResponseValidity",
+            "score": 0.4364400291758518,
+            "threshold": 0.6,
+            "status": "FAIL",
+            "reason": "The response provides a direct answer regarding the unavailability of mandi price data, but it lacks actionable information and key details about alternative sources or specific next steps. The follow-up question about checking prices for other crops is relevant but somewhat generic, which detracts from the overall completeness."
+          },
+          {
+            "name": "ResponseQuality",
+            "score": 0.27903645715178066,
+            "threshold": 0.6,
+            "status": "FAIL",
+            "reason": "The response is classified as PARTIAL due to the absence of critical mandi price data for wheat in Delhi, which is the main query. While a citation is present, it is not formatted correctly as it is not bolded and not on its own line, leading to a minor gap in the response."
+          },
+          {
+            "name": "LanguageQuality_en",
+            "score": 0.8839880688214258,
+            "threshold": 0.6,
+            "status": "PASS",
+            "reason": "The response is entirely in English and clearly communicates the lack of current mandi price data for wheat in Delhi. Grammar is accurate, with correct verb forms and natural phrasing that would be easily understood by an English-speaking farmer. The structure is coherent, leading with the answer, followed by a citation on its own line, and concluding with a relevant follow-up question."
+          }
+        ],
+        "failures": [
+          "ResponseValidity FAILED (score=0.436): The response provides a direct answer regarding the unavailability of mandi price data, but it lacks actionable information and key details about alternative sources or specific next steps. The follow-up question about checking prices for other crops is relevant but somewhat generic, which detracts from the overall completeness.",
+          "ResponseQuality FAILED (score=0.279): The response is classified as PARTIAL due to the absence of critical mandi price data for wheat in Delhi, which is the main query. While a citation is present, it is not formatted correctly as it is not bolded and not on its own line, leading to a minor gap in the response."
+        ]
+      },
+      {
+        "name": "mandi_prices_en_what_is_the_market_rate_of_onion_in_nash",
+        "category": "mandi_prices",
+        "section": "MANDI PRICES (varied commodities, cities, languages)",
+        "language": "en",
+        "language_label": "English",
+        "is_decline": false,
+        "question": "What is the market rate of onion in Nashik?",
+        "actual_output": "I couldn't retrieve the mandi price data for onion in Nashik. Sometimes this happens due to system delays or network issues. Would you like me to try again or check the price of another crop in Nashik?",
+        "pass_rate": 0.3333333333333333,
+        "status": "FAIL",
+        "api_error": false,
+        "metrics": [
+          {
+            "name": "ResponseValidity",
+            "score": 0.13290679617723034,
+            "threshold": 0.6,
+            "status": "FAIL",
+            "reason": "The response fails to provide any actionable information regarding the market rate of onion in Nashik, which is a TRACK-V query. Instead, it offers an explanation for the lack of data without addressing the user's request, leading to a low score."
+          },
+          {
+            "name": "ResponseQuality",
+            "score": 0.02689414272294874,
+            "threshold": 0.6,
+            "status": "FAIL",
+            "reason": "The response is classified as DEFLECT because it provides no useful information regarding the market rate of onion in Nashik, failing to address the query entirely. There are no checklist items present, and the output does not include any relevant data or citations."
+          },
+          {
+            "name": "LanguageQuality_en",
+            "score": 0.8055400366171963,
+            "threshold": 0.6,
+            "status": "PASS",
+            "reason": "The response is entirely in English and clearly communicates the inability to retrieve the requested data. There are no significant grammatical errors, and the phrasing is natural for an English-speaking audience. The structure is coherent, leading with the answer and ending with a follow-up question. However, it lacks a citation line, which slightly detracts from the overall organization."
+          }
+        ],
+        "failures": [
+          "ResponseValidity FAILED (score=0.133): The response fails to provide any actionable information regarding the market rate of onion in Nashik, which is a TRACK-V query. Instead, it offers an explanation for the lack of data without addressing the user's request, leading to a low score.",
+          "ResponseQuality FAILED (score=0.027): The response is classified as DEFLECT because it provides no useful information regarding the market rate of onion in Nashik, failing to address the query entirely. There are no checklist items present, and the output does not include any relevant data or citations."
+        ]
+      }
+    ]
+  }
+}

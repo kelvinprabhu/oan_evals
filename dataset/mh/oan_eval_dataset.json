@@ -1,0 +1,28 @@
+[
+  {
+    "_section": "=== WEATHER FORECAST (11 languages, city-per-region) ==="
+  },
+  {
+    "category": "weather",
+    "language": "en",
+    "question": "What is the weather forecast for pune today?"
+  },
+  {
+    "category": "weather",
+    "language": "mr",
+    "question": "पुणे आजचा मौसम कसा आहे?"
+  },
+  {
+    "_section": "=== MANDI PRICES (varied commodities, cities, languages) ==="
+  },
+  {
+    "category": "mandi_prices",
+    "language": "en",
+    "question": "What is the current mandi price of wheat in pune?"
+  },
+  {
+    "category": "mandi_prices",
+    "language": "en",
+    "question": "What is the market rate of onion in Nagpur?"
+  }
+]

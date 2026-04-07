@@ -1,0 +1,144 @@
+{
+  "meta": {
+    "generated_at": "2026-04-06T07:29:33.112473+00:00",
+    "judge_model": "gpt-4o-mini",
+    "pass_rate_threshold": 0.7,
+    "geval_threshold": 0.6,
+    "total_cases": 4,
+    "passed_cases": 2,
+    "failed_cases": 2,
+    "error_cases": 0,
+    "overall_pass_rate": 0.5,
+    "overall_fail_rate": 0.5,
+    "base_url": "https://dev-vistaar.da.gov.in/",
+    "dataset_path": "dataset/oan_eval_dataset.json"
+  },
+  "summary": {
+    "by_category": [
+      {
+        "category": "weather",
+        "total": 2,
+        "passed": 2,
+        "failed": 0,
+        "error": 0,
+        "pass_rate": 1.0,
+        "failure_rate": 0.0,
+        "failed_case_names": [],
+        "failure_summary": []
+      },
+      {
+        "category": "mandi_prices",
+        "total": 2,
+        "passed": 0,
+        "failed": 2,
+        "error": 0,
+        "pass_rate": 0.0,
+        "failure_rate": 1.0,
+        "failed_case_names": [
+          "mandi_prices_en_what_is_the_current_mandi_prices_of_vege",
+          "mandi_prices_en_what_is_the_market_rate_of_crops_in_nash"
+        ],
+        "failure_summary": [
+          {
+            "metric": "ResponseValidity",
+            "reason": "ResponseValidity FAILED (score=0.331): The response does not provide a direct answer to the query about mandi prices, instead asking for clarification on the specific vegetable, which indicates a lack of immediate actionable information. Additionally, the follow-up question is somewhat relevant but does not address the user's original request for current prices."
+          },
+          {
+            "metric": "ResponseQuality",
+            "reason": "ResponseQuality FAILED (score=0.264): The response is classified as PARTIAL because it fails to provide the mandi prices, which is a critical checklist item. While it attempts to clarify the specific vegetable needed for the price inquiry, it does not include any relevant information about mandi prices, and there is no citation present."
+          },
+          {
+            "metric": "ResponseValidity",
+            "reason": "ResponseValidity FAILED (score=0.491): The response provides a relevant answer by acknowledging the query about market rates, but it does not directly provide the requested information, making it somewhat indirect. The follow-up question is relevant but lacks specificity, as it does not guide the user towards a particular crop or provide any actionable details."
+          },
+          {
+            "metric": "ResponseQuality",
+            "reason": "ResponseQuality FAILED (score=0.359): The response is classified as PARTIAL because it fails to provide the specific market rate of crops, which is a critical checklist item. While it engages the user by asking for a specific crop, it does not fulfill the primary query regarding the market rate, leading to a significant gap in the information provided."
+          }
+        ]
+      }
+    ],
+    "failed_cases": [
+      {
+        "name": "mandi_prices_en_what_is_the_current_mandi_prices_of_vege",
+        "category": "mandi_prices",
+        "section": "MANDI PRICES (varied commodities, cities, languages)",
+        "language": "en",
+        "language_label": "English",
+        "is_decline": false,
+        "question": "What is the current mandi prices of vegetables in Delhi?",
+        "actual_output": "I found Delhi's location. To find vegetable mandi prices, I need to know which specific vegetable you're asking about. Are you looking for tomato, onion, potato, or another vegetable?",
+        "pass_rate": 0.3333333333333333,
+        "status": "FAIL",
+        "api_error": false,
+        "metrics": [
+          {
+            "name": "ResponseValidity",
+            "score": 0.3310708735089492,
+            "threshold": 0.6,
+            "status": "FAIL",
+            "reason": "The response does not provide a direct answer to the query about mandi prices, instead asking for clarification on the specific vegetable, which indicates a lack of immediate actionable information. Additionally, the follow-up question is somewhat relevant but does not address the user's original request for current prices."
+          },
+          {
+            "name": "ResponseQuality",
+            "score": 0.2637987282671578,
+            "threshold": 0.6,
+            "status": "FAIL",
+            "reason": "The response is classified as PARTIAL because it fails to provide the mandi prices, which is a critical checklist item. While it attempts to clarify the specific vegetable needed for the price inquiry, it does not include any relevant information about mandi prices, and there is no citation present."
+          },
+          {
+            "name": "LanguageQuality_en",
+            "score": 0.6216360432319021,
+            "threshold": 0.6,
+            "status": "PASS",
+            "reason": "The response is mostly in English, with only minor issues in clarity and structure. It correctly identifies the need for specificity regarding the vegetable but lacks a direct answer to the question about mandi prices. The phrasing is generally understandable, though slightly awkward, and the structure could be improved by providing a citation line and a follow-up question. Overall, it meets the criteria for a score in the 6-8 range."
+          }
+        ],
+        "failures": [
+          "ResponseValidity FAILED (score=0.331): The response does not provide a direct answer to the query about mandi prices, instead asking for clarification on the specific vegetable, which indicates a lack of immediate actionable information. Additionally, the follow-up question is somewhat relevant but does not address the user's original request for current prices.",
+          "ResponseQuality FAILED (score=0.264): The response is classified as PARTIAL because it fails to provide the mandi prices, which is a critical checklist item. While it attempts to clarify the specific vegetable needed for the price inquiry, it does not include any relevant information about mandi prices, and there is no citation present."
+        ]
+      },
+      {
+        "name": "mandi_prices_en_what_is_the_market_rate_of_crops_in_nash",
+        "category": "mandi_prices",
+        "section": "MANDI PRICES (varied commodities, cities, languages)",
+        "language": "en",
+        "language_label": "English",
+        "is_decline": false,
+        "question": "What is the market rate of crops in Nashik?",
+        "actual_output": "I can help you find the market rate of crops in Nashik. Which crop would you like to know the price for?",
+        "pass_rate": 0.3333333333333333,
+        "status": "FAIL",
+        "api_error": false,
+        "metrics": [
+          {
+            "name": "ResponseValidity",
+            "score": 0.4908021452884655,
+            "threshold": 0.6,
+            "status": "FAIL",
+            "reason": "The response provides a relevant answer by acknowledging the query about market rates, but it does not directly provide the requested information, making it somewhat indirect. The follow-up question is relevant but lacks specificity, as it does not guide the user towards a particular crop or provide any actionable details."
+          },
+          {
+            "name": "ResponseQuality",
+            "score": 0.35886226576205515,
+            "threshold": 0.6,
+            "status": "FAIL",
+            "reason": "The response is classified as PARTIAL because it fails to provide the specific market rate of crops, which is a critical checklist item. While it engages the user by asking for a specific crop, it does not fulfill the primary query regarding the market rate, leading to a significant gap in the information provided."
+          },
+          {
+            "name": "LanguageQuality_en",
+            "score": 0.9999999999999998,
+            "threshold": 0.6,
+            "status": "PASS",
+            "reason": "The response is entirely in English and addresses the question directly by offering assistance in finding the market rate of crops. There are no grammatical errors, and the phrasing is natural and easy to understand for an English-speaking farmer. The structure is coherent, leading with the answer and ending with a follow-up question, which aligns perfectly with the expected format."
+          }
+        ],
+        "failures": [
+          "ResponseValidity FAILED (score=0.491): The response provides a relevant answer by acknowledging the query about market rates, but it does not directly provide the requested information, making it somewhat indirect. The follow-up question is relevant but lacks specificity, as it does not guide the user towards a particular crop or provide any actionable details.",
+          "ResponseQuality FAILED (score=0.359): The response is classified as PARTIAL because it fails to provide the specific market rate of crops, which is a critical checklist item. While it engages the user by asking for a specific crop, it does not fulfill the primary query regarding the market rate, leading to a significant gap in the information provided."
+        ]
+      }
+    ]
+  }
+}

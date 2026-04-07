@@ -1,0 +1,62 @@
+{
+  "description": "Curated commodity list from commodity_codes.json for eval test templates.",
+  "cereals": [
+    {"code": 1, "name": "Wheat"},
+    {"code": 2, "name": "Paddy(Common)"},
+    {"code": 3, "name": "Rice"},
+    {"code": 4, "name": "Maize"},
+    {"code": 5, "name": "Jowar(Sorghum)"},
+    {"code": 28, "name": "Bajra(Pearl Millet)"},
+    {"code": 29, "name": "Barley(Jau)"},
+    {"code": 30, "name": "Ragi(Finger Millet)"}
+  ],
+  "pulses": [
+    {"code": 6, "name": "Bengal Gram(Gram)(Whole)"},
+    {"code": 7, "name": "Red Gram"},
+    {"code": 8, "name": "Black Gram(Urd Beans)(Whole)"},
+    {"code": 9, "name": "Green Gram(Moong)(Whole)"},
+    {"code": 45, "name": "Arhar(Tur/Red Gram)(Whole)"},
+    {"code": 52, "name": "Lentil(Masur)(Whole)"}
+  ],
+  "oilseeds": [
+    {"code": 10, "name": "Groundnut"},
+    {"code": 11, "name": "Sesamum(Sesame,Gingelly,Til)"},
+    {"code": 12, "name": "Mustard"},
+    {"code": 13, "name": "Soyabean"},
+    {"code": 14, "name": "Sunflower"}
+  ],
+  "cash_crops": [
+    {"code": 15, "name": "Cotton"},
+    {"code": 16, "name": "Jute"},
+    {"code": 44, "name": "Sugar"},
+    {"code": 40, "name": "Tea"},
+    {"code": 41, "name": "Coffee"}
+  ],
+  "fruits": [
+    {"code": 17, "name": "Apple"},
+    {"code": 18, "name": "Orange"},
+    {"code": 19, "name": "Banana"},
+    {"code": 20, "name": "Mango"},
+    {"code": 22, "name": "Grapes"},
+    {"code": 59, "name": "Papaya"},
+    {"code": 64, "name": "Mousambi(Sweet Lime)"}
+  ],
+  "vegetables": [
+    {"code": 23, "name": "Onion"},
+    {"code": 24, "name": "Potato"},
+    {"code": 25, "name": "Garlic"},
+    {"code": 65, "name": "Tomato"},
+    {"code": 31, "name": "Cauliflower"},
+    {"code": 32, "name": "Brinjal"},
+    {"code": 71, "name": "Bhindi(Ladies Finger)"},
+    {"code": 73, "name": "Green Chilli"}
+  ],
+  "spices": [
+    {"code": 26, "name": "Chili Red"},
+    {"code": 27, "name": "Ginger(Dry)"},
+    {"code": 34, "name": "Black pepper"},
+    {"code": 35, "name": "Turmeric"},
+    {"code": 36, "name": "Cardamoms"},
+    {"code": 38, "name": "Cumin Seed(Jeera)"}
+  ]
+}
