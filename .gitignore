@@ -26,6 +26,6 @@ htmlcov/
 # PyCharm
 .idea/
 
-# Ignore 
+# Ignore all files in reports
 reports/
 backup/
