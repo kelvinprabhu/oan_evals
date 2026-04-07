@@ -28,3 +28,4 @@ htmlcov/
 
 # Ignore all files in reports directory
 reports/
+backup/
